@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title > Name  Display  </title>
+        <body align="center">
+<form>
+    
+    <table align="center">
+        Name:<input type="text" id="name"> <br> <br> 
+        <td style ="background-color:rgb(4, 0, 255)"><button onclick ="addname(event)"> ADD </button> </td>
+        <td style ="background-color:rgb(2, 2, 59)"><button onclick ="showname()"> SHOW </button></td>
+        
+    </table>
+
+</form>
+
+<div id="getNames">
+
+</div>
+
+<script> 
+let names=[];
+function addname(e){
+   e.preventDefault()
+    let aname= document.getElementById("name").value;
+    names.push(aname);
+    console.log(names)
+}
+
+function showname(){
+    alert('hello')
+   alert(names)
+   
+   for (let name of names){
+      alert (name)
+   }
+
+}
+</script>
+        </body>
+   
+    </head>
+</html>
